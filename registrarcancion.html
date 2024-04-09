@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Canciones</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+    <link rel="stylesheet" href="/app/static/css/style.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>Formulario Canciones</h1>
+        <form  class="nav" action="/registrarcancion" method="POST" enctype="multipart/form-data">
+            <fieldset>
+                <div id=der>
+                    <label for="titulo">Titulo cancion:</label><br>
+                    <input type="text" id="titulo" required name="titulocancion" ><br>
+
+                    <label for="artista">Artista:</label><br>
+                    <input type="text" id="artista" required name="Artista" ><br>
+
+                    <label for="genero">Genero:</label><br>
+                    <input type="text" id="genero" required name="genero" ><br>
+
+                    <label for="duracion">Duracion:</label><br>
+                    <input type="varchar" id="duracion" required name="duracion" ><br>
+
+                    <label for="precio">Precio:</label><br>
+                    <input type="text" id="precio" required name="precio"><br>
+
+                    <label for="Alanzamiento">Fecha de lanzamiento:</label><br>
+                    <input type="date" id="Alanzamiento" required name="Alanzamiento" ><br>
+                    
+                    <!-- Si deseas permitir a los usuarios cargar imágenes desde sus dispositivos, se usa input type "file" -->
+                    <label for="imgcancion">Imagen:</label><br>
+                    <input type="file" id="imgcancion" required name="imgcancion" ><br>
+
+                    <input type="submit" value="Enviar">
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>

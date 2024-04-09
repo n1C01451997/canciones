@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+    <link rel="stylesheet" href="/app/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Bienvenido, {{ session ['usuario'] }} </h1>
+        <p>has iniciado sesion correctamente</p>
+        <h1>listado de canciones</h1>
+        <a href="/logout"><button>cerrar sesion</button></a>
+        <fieldset>
+            <table id="der">
+                <tr>
+                    <th>portada</th>
+                    <th>Titulo cancion</th>
+                    <th>Artista</th>
+                    <th>Genero</th>
+                    <th>Duracion</th>
+                    <th>Precio</th>
+                    <th>Fecha de lanzamiento</th>
+                </tr>
+                <tbody>
+                    {% for cancion in canciones %}
+                        <tr>
+                            <td><img src="data:image/jpeg;base64,{{cancion.imagen}}" alt="no sale imagen" width="100"></td>
+                            <td>{{cancion.titulo}}</td>
+                            <td>{{cancion.artista}}</td>
+                            <td>{{cancion.genero}}</td>
+                            <td>{{cancion.duracion}}</td>
+                            <td>{{cancion.precio}}</td>
+                            <td>{{cancion.lanzamiento}}</td>
+                         
+                            
+                            <td>
+                                <!--<a href="{{url_for('actualizar_cancion',id=cancion[0])}}">Editar</a>-->
+                                <!--<a href="{{url_for('eliminarcancion',id=cancion[0])}}">Eliminar</a>-->
+                                
+                            </td>
+                        </tr>
+                    {% endfor %} 
+                </tbody>
+            </table>
+            <a href="{{ url_for ('registrar_cancion') }}"><button>Agregar Cancion</button></a>
+        </fieldset>
+    </div>
+</body>
+</html>

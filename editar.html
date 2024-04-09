@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/app/static/css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <form method="POST">
+            <h1>DATOS A EDITAR</h1>
+            <fieldset>
+                <div id="der">
+                    <label>ID</label>
+                    <br>
+                    <input type="number" placeholder="Ingresar su ID" name="idper" value="{{ persona[0] }}" disabled>
+                    <br>
+                    <label>NOMBRE</label>
+                    <br>
+                    <input type="text" placeholder="ingresar su nombre" name="nombreper" value="{{ persona[1] }}" >
+                    <br>
+                    <label>APELLIDO</label>
+                    <br>
+                    <input type="text" placeholder="ingresar su apellido" name="apellidoper" value="{{ persona[2] }}" >
+                    <br>
+                    <label>EMAIL</label>
+                    <br>
+                    <input type="email" placeholder="ingresar su email" name="emailper" value="{{ persona[3] }}" >
+                    <br>
+                    <label>DIRECCION</label>
+                    <br>
+                    <input type="text" placeholder="ingrese su Direccion"  name="direccionper" value="{{ persona[4] }}" >
+                    <br>
+                    <label>TELEFONO</label>
+                    <br>
+                    <input type="number" placeholder="ingrese su telefono"  name="telefonoper" value="{{ persona[5] }}" >
+                    <br>
+                    <label>USUARIO</label>
+                    <br>
+                    <input type="text" placeholder="ingrese su usuario"  name="usuarioper" value="{{ persona[6] }}" disabled>
+                    <br>
+                    <label>CONTRASEÑA</label>
+                    <br>
+                    <input type="password" placeholder="ingrese su password"  name="passwordper" value="{{ persona[7] }}" >
+                    <br>
+                    <label>ROL:</label>
+                    <br>
+                    <input type="text" placeholder="ingrese su rol"  name="roles" value="{{ persona[8] }}" >
+                    <br>
+                    <input type="submit" value="guardar cambios" >
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>

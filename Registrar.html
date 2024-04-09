@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+    <link rel="stylesheet" href="/app/static/css/style.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>Formulario</h1>
+        <form id=der class="nav" action="/Registrar" method="POST">
+            <fieldset>
+                <label for="nombre">Nombre:</label><br>
+                <input type="text" id="nombre" required name="nombre" ><br>
+
+                <label for="apellido">Apellido:</label><br>
+                <input type="text" id="apellido" required name="apellido" ><br>
+
+                <label for="email">Email:</label><br>
+                <input type="text" id="email" required name="email" ><br>
+
+                <label for="direccion">Direccion:</label><br>
+                <input type="text" id="direccion" required name="direccion" ><br>
+
+                <label for="Telefono">Telefono:</label><br>
+                <input type="text" id="telefono" required name="telefono"><br>
+
+                <label for="usuario">Usuario:</label><br>
+                <input type="text" id="usuario" required name="usuario" ><br>
+
+                <label for="Contraseña">Contraseña:</label><br>
+                <input type="password" id="Contraseña" required name="contrasena" ><br>
+
+                <label for="rol">seleccione su rol</label>
+                <select name="rol" id="rol" required>
+                    <option value="administrador">administrador</option>
+                    <option value="comprador">comprador</option>
+                </select>
+
+                <br>
+
+                <input type="submit" value="Enviar">
+
+            </fieldset>
+        </form>
+    </div>
+</body>
+
+</html>

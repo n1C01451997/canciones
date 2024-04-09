@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/app/static/css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <form method="POST">
+            <h1>Datos a Actualizar de la cancion</h1>
+            <fieldset>
+                <div id="der">
+                    <label>ID Cancion</label>
+                    <br>
+                    <input type="number" name="idCancion" value="{{ cancion[0] }}" disabled>
+                    <br>
+                    <label>Titulo cancion</label>
+                    <br>
+                    <input type="text" placeholder="ingresar el titulo" name="titulocancion" value="{{ cancion[1] }}" >
+                    <br>
+                    <label>Artista</label>
+                    <br>
+                    <input type="text" placeholder="ingresar el artista" name="Artista" value="{{ cancion[2] }}" >
+                    <br>
+                    <label>Genero</label>
+                    <br>
+                    <input type="text" placeholder="ingresar el genero" name="genero" value="{{ cancion[3] }}" >
+                    <br>
+                    <label>Duracion</label>
+                    <br>
+                    <input type="text" placeholder="ingrese la duracion"  name="duracion" value="{{ cancion[4] }}" >
+                    <br>
+                    <label>Precio</label>
+                    <br>
+                    <input type="number" placeholder="ingrese el precio"  name="precio" value="{{ cancion[5] }}" >
+                    <br>
+                    <label>Fecha de lanzamiento</label>
+                    <br>
+                    <input type="date" placeholder="ingrese la fecha de lanzamiento"  name="Alanzamiento" value="{{ cancion[6] }}" >
+                    <br>
+                    <label>Img</label>
+                    <br>
+                    <input type="file" placeholder="ingrese la imagen de la cancion"  name="imgcancion" value="{{ cancion[7] }}" >
+                    <br>
+                    <input type="submit" value="guardar cambios" >
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>

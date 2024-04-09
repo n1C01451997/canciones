@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eliminar Usuario</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/eliminar.css') }}">
+    <link rel="stylesheet" href="/app/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Eliminar Usuario</h1>
+        <form id="der" method="post">
+            <div class="form-group">
+                <label for="codigo">Código:</label>
+                <input type="text" id="codigo" name="codigo" value="{{ persona[0] }}" readonly>
+            </div>
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" value="{{ persona[1] }}" readonly>
+            </div>
+            <div class="form-group">
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" name="apellido" value="{{ persona[2] }}" readonly>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email" value="{{ persona[3] }}" readonly>
+            </div>
+            <div class="form-group">
+                <label for="direccion">Dirección:</label>
+                <input type="text" id="direccion" name="direccion" value="{{ persona[4] }}" readonly>
+            </div>
+            <div class="form-group">
+                <label for="telefono">Teléfono:</label>
+                <input type="text" id="telefono" name="telefono" value="{{ persona[5] }}" readonly>
+            </div>
+            <div class="form-group">
+                <label for="usuario">Usuario:</label>
+                <input type="text" id="usuario" name="usuario" value="{{ persona[6] }}" readonly>
+            </div>
+
+            <!-- Botón de cancelar -->
+            <a href="{{ url_for('lista') }}" class="btn-cancelar"><button>Cancelar</button></a>
+            
+            <!-- Botón de eliminar -->
+            <input type="submit" value="Confirmar" class="btn-eliminar">
+        </form>
+    </div>
+</body>
+</html>

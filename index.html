@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+    <link rel="stylesheet" href="/app/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Bienvenido, {{ session ['usuario'] }} </h1>
+        <p>has iniciado sesion correctamente</p>
+        <h1>listado de usuarios</h1>
+        <a href="/logout"><button>cerrar sesion</button></a>
+        <fieldset>
+            <table id="der">
+                <tr>
+                    <th>Codigo</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Email</th>
+                    <th>Direccion</th>
+                    <th>Telefono</th>
+                    <th>Usuraio</th>
+                    <th>rol</th>
+                </tr>
+                <tbody>
+                    {% for usuario in personas %}
+                        <tr>
+                            <td>{{usuario[0]}}</td>
+                            <td>{{usuario[1]}}</td>
+                            <td>{{usuario[2]}}</td>
+                            <td>{{usuario[3]}}</td>
+                            <td>{{usuario[4]}}</td>
+                            <td>{{usuario[5]}}</td>
+                            <td>{{usuario[6]}}</td>
+                            <td>{{usuario[8]}}</td>
+                            <td>
+                                <a href="{{url_for('editar_usuario',id=usuario[0])}}"><button>Editar</button></a>
+                                <a href="{{url_for('eliminar_usuario',id=usuario[0])}}"><button>Eliminar</button></a>
+                                <a href="{{ url_for ('registrar_cancion') }}"><button>Agregar Cancion</button></a>
+                            </td>
+                        </tr>
+                    {% endfor %} 
+                </tbody>
+            </table>
+            <a href="{{ url_for ('registrar_usuario') }}"><button>Agregar usuario</button></a>
+            <a href="{{ url_for ('listacanciones') }}"><button>Lista de canciones</button></a>
+        </fieldset>
+    </div>
+</body>
+</html>
+

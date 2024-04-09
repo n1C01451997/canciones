@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/app/static/css/style.css">
+    <title>Eliminar Canción</title>
+</head>
+<body>
+    <div class="container">
+        <form method="POST">
+            <h1>Eliminar Canción</h1>
+            <fieldset>
+                <div id="der">
+                    
+                    <label>ID Canción:</label>
+                    <br>
+                    <input type="number" name="idCancion" value="{{ cancion[0] }}" readonly>
+                    <br>
+                    <label>Título Canción:</label>
+                    <br>
+                    <input type="text" name="tituloCancion" value="{{ cancion[1] }}" readonly>
+                    <br>
+                    <label>Artista:</label>
+                    <br>
+                    <input type="text" name="artista" value="{{ cancion[2] }}" readonly>
+                    <br>
+                    <label>Género:</label>
+                    <br>
+                    <input type="text" name="genero" value="{{ cancion[3] }}" readonly>
+                    <br>
+                    <label>Duración:</label>
+                    <br>
+                    <input type="text" name="duracion" value="{{ cancion[4] }}" readonly>
+                    <br>
+                    <label>Precio:</label>
+                    <br>
+                    <input type="number" name="precio" value="{{ cancion[5] }}" readonly>
+                    <br>
+                    <label>Fecha de Lanzamiento:</label>
+                    <br>
+                    <input type="text" name="fechaLanzamiento" value="{{ cancion[6] }}" readonly>
+                    <br>
+                    <label>Imagen:</label>
+                    <br>
+                    <input type="text" name="imagen" value="{{ cancion[7] }}" readonly>
+                    <br>
+                    <p>¿Estás seguro de que deseas eliminar esta canción?</p>
+                    <input type="submit" value="Eliminar Canción">
+                    <a href="{{ url_for('lista') }}"><button>Cancelar</button></a>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>
+
